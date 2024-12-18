@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVPSIT College</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Full Header Image -->
+    <header>
+        <img src="http://pvpsit.ac.in/new_images/head.jpg" alt="PVPSIT Banner" class="header1-logo">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About Us</a></li>
+                <li><a href="#" onclick="showSection('departments')">Departments</a></li>
+                <li><a href="#" onclick="showSection('achievements')">Achievements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section" style="display: block;">
+        <div class="home-content">
+            <h1>Welcome to PVPSIT</h1>
+            <p>Your future begins here! We empower students with knowledge, skills, and values.</p>
+        </div>
+        <img src="https://i.ytimg.com/vi/NUH-rTHorZQ/maxresdefault.jpg" alt="Campus Image" class="home-logo">
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section" style="display: none;">
+        <h2>About Us</h2>
+        <p>
+            Established in 1998, Prasad V. Potluri Siddhartha Institute of Technology (PVPSIT) is a premier engineering institution affiliated with JNTU Kakinada. 
+            Located in Vijayawada, Andhra Pradesh, PVPSIT is committed to providing quality education and fostering innovation.
+        </p>
+        <p>
+            With a sprawling campus equipped with state-of-the-art infrastructure, the college offers undergraduate and postgraduate programs in various engineering disciplines. 
+            Our experienced faculty and robust academic programs ensure that students are prepared for global challenges in their careers.
+        </p>
+        <p>
+            At PVPSIT, we emphasize research, industry collaboration, and extracurricular activities, creating a well-rounded learning experience. 
+            Join us to embark on a journey of academic excellence and holistic development.
+        </p>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="section" style="display: none;">
+        <h2>Departments</h2>
+        <div class="departments-nav">
+            <ul>
+                <li><a href="#" onclick="showDepartment('cse')">CSE</a></li>
+                <li><a href="#" onclick="showDepartment('ece')">ECE</a></li>
+                <li><a href="#" onclick="showDepartment('mech')">Mechanical</a></li>
+                <li><a href="#" onclick="showDepartment('civil')">Civil</a></li>
+                <li><a href="#" onclick="showDepartment('eee')">EEE</a></li>
+            </ul>
+        </div>
+    
+        <!-- Department Details -->
+        <div class="department-content" id="cse" style="display: none;">
+            <h3>Computer Science and Engineering</h3>
+            <p>Explore the world of algorithms, programming, and cutting-edge technologies.</p>
+        </div>
+        <div class="department-content" id="ece" style="display: none;">
+            <h3>Electronics and Communication Engineering</h3>
+            <p>Innovate and design modern communication systems and electronic devices.</p>
+        </div>
+        <div class="department-content" id="mech" style="display: none;">
+            <h3>Mechanical Engineering</h3>
+            <p>Delve into the principles of mechanics, energy, and material science.</p>
+        </div>
+        <div class="department-content" id="civil" style="display: none;">
+            <h3>Civil Engineering</h3>
+            <p>Build the future with expertise in construction, design, and sustainability.</p>
+        </div>
+        <div class="department-content" id="eee" style="display: none;">
+            <h3>Electrical Engineering</h3>
+            <p>Master the study of power systems, electronics, and electrical machines.</p>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section" style="display: none;">
+        <h2>Achievements</h2>
+        <div class="achievements-gallery">
+            <div class="achievement-item">
+                <img src="http://pvpsit.ac.in/new_images/nba.jpg" alt="Achievement 1">
+            </div>
+            <div class="achievement-item">
+                <img src="http://pvpsit.ac.in/new_images/Banner7.jpg" alt="Achievement 2">
+            </div>
+            <div class="achievement-item">
+                <img src="http://pvpsit.ac.in/new_images/AT&T_16LPA_5.jpg" alt="Achievement 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 PVPSIT College. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function showDepartment(departmentId) {
+            const allDepartments = document.querySelectorAll('.department-content');
+            allDepartments.forEach(dept => dept.style.display = 'none');
+
+            const selectedDepartment = document.getElementById(departmentId);
+            if (selectedDepartment) {
+                selectedDepartment.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
